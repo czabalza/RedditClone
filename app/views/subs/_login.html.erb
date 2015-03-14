@@ -1,0 +1,14 @@
+<form class="" action="<%= action %>" method="post">
+  <% if edit %>
+    <input type="hidden" name="_method" value="PATCH">
+  <% end %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label>Name:
+  <input type="text" name="sub[title]" value="<%= @sub.title %>">
+  </label>
+  <label>Description:
+  <input type="textarea" name="sub[description]" value="<%= @sub.description %>">
+  </label>
+  <input type="submit" value="<%= submit_msg %>">
+</form>

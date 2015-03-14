@@ -1,0 +1,9 @@
+<h1><%= @post.title %></h1>
+<a href="<%= @post.url %>"><%= @post.url %></a>
+<br>
+<p>
+  <%= @post.content %>
+</p>
+<p>
+  by: <%= User.find(@post.author_id).name %>
+</p>
